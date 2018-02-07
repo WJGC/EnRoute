@@ -1,8 +1,38 @@
+<!doctype html>
+
 <html>
-<head>
-	<title>Test Page</title>
-</head>
-<body>
-Begin here (or replace this with any static code already written).
-</body>
+	<head>
+		<title>RUHereYet</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+		<!--<link href="/css/homepage.css" rel="stylesheet">-->
+		<link href="/css/menu.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="dropdown">
+  			<button id="dropbtn">Menu</button>
+  			<div id="myDropdown" class="dropdown-content">
+    			<a href="/views/index.handlebars">Home</a>
+    			<a href="/views/meetingsCreated.handlebars">Meetings Created</a>
+    			<a href="/views/meetingsJoined.handlebars">Meetings Joined</a>
+    			<a href="/views/friends.handlebars">Friends</a>
+    			<a href="/views/profile.handlebars">Profile</a>
+  			</div>
+		</div>
+
+		<button id="addMeeting">Add Meeting</button>
+
+   		<div class="searchBarHolder">
+     		<input id="pac-input" class="controls" type="text" placeholder="Find a Location...">
+     	</div>
+     	
+     	<div id="map"></div>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0WRQl-Hgot5KsHhaHU9zLo4SgK5nL6M4&libraries=places&callback=initMap"
+      		async defer></script>
+	    <script src="/js/homepage.js"></script>
+	    <script src="/js/menu.js"></script>
+	</body>
 </html>
