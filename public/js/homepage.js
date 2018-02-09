@@ -110,4 +110,5 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 toggle between hiding and showing the dropdown content */
 document.getElementById("addMeeting").addEventListener("click",function(){
   console.log("addMeeting");
+  window.location.href = "addMeeting.html";
 });
