@@ -60,8 +60,7 @@ html, body {
  font-family: Roboto;
  font-size: 15px;
  font-weight: 300;
- /*margin-left: 12px;*/
- margin: auto;
+ margin-left: 12px;
  padding: 13px 11px 11px 13px;
  text-overflow: ellipsis;
  width: 300px;
