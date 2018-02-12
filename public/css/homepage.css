@@ -93,3 +93,15 @@ html, body {
     bottom: 10px;
     right: 10px; 
 }
+
+.navbar {
+    margin-top: 100px;
+    z-index: 1;
+    position: fixed;
+}
+
+li {
+    list-style-type: none;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 25px;
+}

@@ -12,28 +12,47 @@
 	</head>
 	<body>
 		<div class="container" style="z-index: 1; position: absolute; left: 10px; top: 130px;">
-		<div class="dropdown">
-  			<button id="dropbtn">Menu</button>
-  			<div id="myDropdown" class="dropdown-content">
-    			<a href="#">Home</a>
-    			<a href="meetingsCreated.html">Meetings Created</a>
-    			<a href="meetingsJoined.html">Meetings Joined</a>
-    			<a href="friends.html">Friends</a>
-    			<a href="profile.html">Profile</a>
-  			</div>
+			<div class="dropdown">
+  				<button id="dropbtn">Menu</button>
+  				<div id="myDropdown" class="dropdown-content">
+    				<a href="#">Home</a>
+    				<a href="meetingsCreated.html">Meetings Created</a>
+    				<a href="meetingsJoined.html">Meetings Joined</a>
+    				<a href="friends.html">Friends</a>
+    				<a href="profile.html">Profile</a>
+  				</div>
+			</div>
 		</div>
+		<div class="container" style="z-index: 1; position: absolute; left: 90px; top: 125px;">
+			<li><a href="./signin-page.html">Log In</a></li>
 		</div>
+		<div class="container" style="z-index: 1; position: absolute; left: 180px; top: 125px">
+        	<li><a href="./signup-page.html">Sign Up</a></li>
+        </div>
 		<div class="container" style="z-index: 1; position: absolute; left: 30px; top:130px;">
 		<button id="addMeeting">Add Meeting</button>
 		</div>
    		<div class="searchBarHolder">
-     		<input id="pac-input" class="controls" type="text" placeholder="Find a Location...">
+     		<input id="pac-input" class="controls" type="text" placeholder="Meet at a Location...">
      	</div>
      	
      	<div id="map"></div>
+     	<!--   Core JS Files   -->
+		<script src="./assets/js/jquery.min.js" type="text/javascript"></script>
+		<script src="./assets/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="./assets/js/material.min.js"></script>
 
+		<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+		<script src="./assets/js/nouislider.min.js" type="text/javascript"></script>
+
+		<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+		<script src="./assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
+
+		<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+		<script src="./assets/js/material-kit.js" type="text/javascript"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0WRQl-Hgot5KsHhaHU9zLo4SgK5nL6M4&libraries=places&callback=initMap"
       		async defer></script>
+
 	    <script src="/js/homepage.js"></script>
 	    <script src="/js/menu.js"></script>
 	</body>
