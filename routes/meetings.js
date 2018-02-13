@@ -3,7 +3,7 @@
  * GET home page.
  */
 
-var meetings = require("../data.json");
+var meetings = require("../meetings.json");
 
 exports.view = function(req, res){
   res.render('index', meetings);
