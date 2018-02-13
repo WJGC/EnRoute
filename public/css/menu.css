@@ -42,3 +42,9 @@
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+.header {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
