@@ -1,6 +1,7 @@
 {
 	"meetings": [
 		{
+			"meetingLocation": "string",
 			"altitude": " alt ",
 			"longitude": "long",
 			"meetingName": "Geisel",
