@@ -85,21 +85,24 @@ function initMap() {
 
       map.setCenter(pos);
 
-      // create location based on meeting set
-      $.getJSON("../json/meetings.json", function(meetings) {
-        console.log(meetings);
-        var marker = new google.maps.Marker({
+      var marker = new google.maps.Marker({
           position: pos,
           map: map
-        });
+      });
+
+      
+      // create location based on meeting set
+      $.getJSON("../json/meetings.json", function(meetings) {
+        
         var searchString = meetings.meetings[0].meetingLocation;
+        var meetTime = meetings.meetings[0].time;
         var geocoder = new google.maps.Geocoder();
         geocoder.geocode({
           'address': searchString
         }, function (result, status) {
           if (status == 'OK') {
             var meetinginfoWindow = new google.maps.InfoWindow;
-            meetinginfoWindow.setContent("You have a meeting at " + searchString);
+            meetinginfoWindow.setContent("You have a meeting at " + searchString +", at " + meetTime );
             map.setCenter(result[0].geometry.location);
             var marker2 = new google.maps.Marker({
                 map: map,
