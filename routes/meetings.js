@@ -8,7 +8,7 @@ var meetingsJoined = require("../meetingsJoined.json");
 
 exports.view = function(req, res){
   res.render('meetings', meetingsCreated);
-  res.render('meetings', meetingsJoined);
+  //res.render('meetings', meetingsJoined);
 };
 
 /*exports.addMeeting = function(req, res){

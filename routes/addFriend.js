@@ -6,8 +6,8 @@ var friends = require("../friends.json");
 
 exports.addFriend = function(req, res){
   var newFriend = {
-  	"name" = req.query.name,
-  	"username" = req.query.username
+  	"name" : req.query.name,
+  	"username" : req.query.username
   }
 
   friends.friends.push(newFriend);
