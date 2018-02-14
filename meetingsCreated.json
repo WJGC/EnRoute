@@ -1,12 +1,11 @@
 {
-	"meetings": [
+	"meetingsCreated": [
 		{
 			"meetingLocation": "string",
 			"altitude": " alt ",
 			"longitude": "long",
 			"meetingName": "Geisel",
 			"time": "2:00",
-			"creator" : "creator",
 			"invited" : [{
 				"name": "Glen Carlisle",
 				"username": "Vanemoinen",

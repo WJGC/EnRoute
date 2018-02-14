@@ -21,6 +21,13 @@
   			</div>
 		</div>
 
+		<h3> List of Meetings You Have Joined </h3>
+		<ul>
+			{{#each meetingsJoined}}
+			<li>You have joined the meeting: {{meetingName}} at {{time}}</li>
+			{{/each}}
+		</ul>
+
 		<script src="/js/menu.js"></script>
 	</body>
 </html>
