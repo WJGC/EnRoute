@@ -92,8 +92,9 @@ function initMap() {
 
       
       // create location based on meeting set
-      $.getJSON("../json/meetings.json", function(meetings) {
-        
+      //$.getJSON("../json/meetings.json", function(meetings) {
+        $.getJSON("../meetings.json", function(meetings) {
+
         var searchString = meetings.meetings[0].meetingLocation;
         var meetTime = meetings.meetings[0].time;
         var geocoder = new google.maps.Geocoder();
