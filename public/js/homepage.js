@@ -93,7 +93,7 @@ function initMap() {
       
       // create location based on meeting set
       //$.getJSON("../json/meetings.json", function(meetings) {
-        $.getJSON("../meetings.json", function(meetings) {
+        $.getJSON("/meetings.json", function(meetings) {
 
         var searchString = meetings.meetings[0].meetingLocation;
         var meetTime = meetings.meetings[0].time;
@@ -144,7 +144,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-document.getElementById("addMeeting").addEventListener("click",function(){
+document.getElementById("addMeetingButton").addEventListener("click",function(){
   console.log("addMeeting");
   window.location.href = "addMeeting.html";
 });

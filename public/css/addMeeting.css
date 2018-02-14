@@ -9,13 +9,6 @@
 	box-sizing: border-box;
 }
 
-#notifications {
-	box-sizing: border-box;
-	border: solid 1px black;
-	border-width: 2px;
-	border-radius: 4px;
-	background-color: white;
-}
 
 #submit {
 

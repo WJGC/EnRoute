@@ -13,16 +13,16 @@
 
 		<form id="addMeetingForm" role="form" method="get" action="/add">
 
-			<h3>Add a Meeting to your Set Location</h3>
+			<h3>Choose Meeting Specifications</h3>
 
 			<div class="form-group">
 	          <label for="meetingName">Meeting Name:</label>
-	          <input type="text" class="form-control" id="meetingName" placeholder="Name" name="meetingName">
+	          <input type="text" class="inputField form-control" id="meetingName" placeholder="Name" name="meetingName">
 	        </div>
 
 			<div class="form-group">
 	          <label for="meetingTime">Meeting Time:</label>
-	          <input type="text" class="form-control" id="meetingTime" placeholder="Name" name="meetingTime">
+	          <input type="text" class="inputField form-control" id="meetingTime" placeholder="00:00" name="meetingTime">
 	        </div>
 
 			<p>Invite Friends</p>
@@ -37,10 +37,13 @@
 	  			<input type="radio" name="five" value="five"> Friend is 5 min away <br>
 	  			<input type="radio" name="two" value="two"> Friend is 2 min away <br>
 
+	  			<br>
+
 	  			<input type="submit" id="submitBtn" class="btn btn-default" value="Add the Meeting"></input>
   		</form>
 		<br>
-		<button id="cancel" type="button">Cancel</button>
+		<button id="cancel" class="btn btn-default" type="button">Cancel</button>
 
+		<script src="/js/addMeeting.js"></script>
 	</body>
 </html>

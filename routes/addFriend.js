@@ -11,7 +11,7 @@ exports.addFriend = function(req, res){
   }
 
   friends.friends.push(newFriend);
-  res.render('index', friends);
+  res.render('friends', friends);
 };
 
 /*exports.addMeeting = function(req, res){

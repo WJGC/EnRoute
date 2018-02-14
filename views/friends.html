@@ -23,13 +23,11 @@
 
     <h3 class="header">Friends</h3>
     <h6>Your Friends List</h6>
-    <li> {{#each friends}}
+      {{#each friends}}
       <li>
          Username: {{username}} | Name: {{name}}
       </li>
-
       {{#each}}
-    </li>
 
     <form id="addFriendForm" role="form" method="get" action="/add">
       <h3>Add a friend</h3>

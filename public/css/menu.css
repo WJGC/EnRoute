@@ -1,15 +1,22 @@
+/*Container for all dropdown content */
+.container {
+    z-index: 1; 
+    position: fixed; 
+    left: .5vw; 
+    top: 45vw;
+}
+
 /* Dropdown Button */
-.dropbtn {
-    background-color: #3498DB;
-    color: white;
+#dropbtn {
+    color: black;
     padding: 16px;
-    font-size: 16px;
-    border: none;
+    font-size: 25px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 /* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
+#dropbtn:hover, #dropbtn:focus {
     background-color: #2980B9;
 }
 
@@ -47,4 +54,19 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+#addMeetingButton {
+    z-index: 1; 
+    position: fixed; 
+    right: 12vw; 
+    bottom: 6vw;
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+/* addMeeting button on hover & focus */
+#addMeetingButton:hover, #addMeetingButton:focus {
+    background-color: #2980B9;
 }

@@ -12,7 +12,11 @@
 		<link href="/css/material-kit.css" rel="stylesheet" />
 	</head>
 	<body>
-		<div class="container" style="z-index: 1; position: absolute; left: 10px; top: 130px;">
+		<div id="instruction">
+			Search a Location to Set Your Meeting At!
+		</div>
+
+		<div class="container">
 			<div class="dropdown">
   				<button id="dropbtn">Menu</button>
   				<div id="myDropdown" class="dropdown-content">
@@ -20,19 +24,21 @@
     				<a href="meetingsCreated.html">Meetings Created</a>
     				<a href="meetingsJoined.html">Meetings Joined</a>
     				<a href="friends.html">Friends</a>
-    				<a href="/profile">Profile</a>
+    				<a href="profile">Profile</a>
   				</div>
 			</div>
 		</div>
-		<div class="container" style="z-index: 1; position: absolute; left: 90px; top: 125px;">
+
+		<div style="z-index: 1; position: absolute; margin-left: 180px; top: 125px;">
 			<li><a href="./signin-page.html">Log In</a></li>
 		</div>
-		<div class="container" style="z-index: 1; position: absolute; left: 180px; top: 125px">
+
+		<div style="z-index: 1; position: absolute; margin-left: 270px; top: 125px">
         	<li><a href="./signup-page.html">Sign Up</a></li>
         </div>
-		<div class="container" style="z-index: 1; position: absolute; left: 30px; top:130px;">
-		<button id="addMeeting">Add Meeting</button>
-		</div>
+
+		<button id="addMeetingButton">Add Meeting at Pin</button>
+
    		<div class="searchBarHolder">
      		<input id="pac-input" class="controls" type="text" placeholder="Meet at a Location...">
      	</div>

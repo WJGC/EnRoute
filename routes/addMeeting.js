@@ -16,7 +16,7 @@ exports.addMeeting = function(req, res){
   }
 
   meetings.meetings.push(newMeeting);
-  res.render('index', meetings);
+  res.render('meetings', meetings);
 };
 
 /*exports.addMeeting = function(req, res){
