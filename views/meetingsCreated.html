@@ -21,10 +21,10 @@
   			</div>
 		</div>
 
-		<h3> List of Meetings You Have Created </h3>
+		<h3 class="header"> List of Meetings You Have Created </h3>
 		<ul>
-			{{#each meetings}}
-			<li></li>
+			{{#each meetingsCreated}}
+			<li> You created the meeting: {{meetingName}} at {{time}}</li>
 			{{/each}}
 		</ul>
 
