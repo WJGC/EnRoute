@@ -10,29 +10,36 @@
 		<link href="/css/addMeeting.css" rel="stylesheet">
 	</head>
 	<body>
-		<p>Meeting Name</p>
-		<input class="inputField" id="meetingName" type="text" placeholder="ex: Conference">
 
-		<p>Meeting Time and Date</p>
-		<input class="inputField" id="meetingTime" type="text" placeholder="1:00-24:00">
-		<input class="inputField" id="meetingDate" type="text" placeholder="ex: 11/23">
+		<form id="addMeetingForm" role="form" method="get" action="/add">
 
-		<p>Invite Friends</p>
-		<input class="inputField" id="friendName" type="text" placeholder="ex: Johnny">
-		<ul>
-			<li>Kyle</li>
-			<li>Glen</li>
-		</ul>
+			<h3>Add a Meeting to your Set Location</h3>
 
-		<p>Select Arrival Time(s) Notifications</p>
-		<form id="notifications" action="">
-  			<input type="radio" name="ten" value="ten"> Friend is 10 min away <br>
-  			<input type="radio" name="five" value="five"> Friend is 5 min away <br>
-  			<input type="radio" name="two" value="two"> Friend is 2 min away <br>
-		</form>
+			<div class="form-group">
+	          <label for="meetingName">Meeting Name:</label>
+	          <input type="text" class="form-control" id="meetingName" placeholder="Name" name="meetingName">
+	        </div>
 
+			<div class="form-group">
+	          <label for="meetingTime">Meeting Time:</label>
+	          <input type="text" class="form-control" id="meetingTime" placeholder="Name" name="meetingTime">
+	        </div>
+
+			<p>Invite Friends</p>
+			<input class="inputField" id="friendName" type="text" placeholder="ex: Johnny">
+			<ul>
+				<li>Kyle</li>
+				<li>Glen</li>
+			</ul>
+
+			<p>Select Arrival Time(s) Notifications</p>
+	  			<input type="radio" name="ten" value="ten"> Friend is 10 min away <br>
+	  			<input type="radio" name="five" value="five"> Friend is 5 min away <br>
+	  			<input type="radio" name="two" value="two"> Friend is 2 min away <br>
+
+	  			<input type="submit" id="submitBtn" class="btn btn-default" value="Add the Meeting"></input>
+  		</form>
 		<br>
-		<button id="submit" type="button">Submit</button>
 		<button id="cancel" type="button">Cancel</button>
 
 	</body>
