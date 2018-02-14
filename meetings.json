@@ -1,10 +1,10 @@
 {
 	"meetings": [
 		{
-			"meetingLocation": "string",
 			"altitude": " alt ",
 			"longitude": "long",
 			"meetingName": "Geisel",
+			"meetingLocation": "Geisel Library",
 			"time": "2:00",
 			"creator" : "creator",
 			"invited" : [{
@@ -17,7 +17,7 @@
 				"username": "Rachelgirl5",
 				"profilePic": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg"		
 			}],
-			"finished" : "true"			
+			"finished": "true"			
 		}
 	]
 }
