@@ -1,3 +1,4 @@
+
 //Javascript functions for homepage with map
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -6,6 +7,7 @@ function initMap() {
     mapTypeId: 'roadmap'
   });
   var infoWindow = new google.maps.InfoWindow;
+
 
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
@@ -79,16 +81,45 @@ function initMap() {
       infoWindow.setPosition(pos);
 
       infoWindow.setContent('My Location');
-      var marker = new google.maps.Marker({
-        position: pos,
-        map: map
-      });
-
-      marker.addListener('click', function() {
-        infoWindow.open(map, marker);
-      });
+      
 
       map.setCenter(pos);
+
+      // create location based on meeting set
+      $.getJSON("../json/meetings.json", function(meetings) {
+        console.log(meetings);
+        var marker = new google.maps.Marker({
+          position: pos,
+          map: map
+        });
+        var searchString = meetings.meetings[0].meetingLocation;
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({
+          'address': searchString
+        }, function (result, status) {
+          if (status == 'OK') {
+            var meetinginfoWindow = new google.maps.InfoWindow;
+            meetinginfoWindow.setContent("You have a meeting at " + searchString);
+            map.setCenter(result[0].geometry.location);
+            var marker2 = new google.maps.Marker({
+                map: map,
+                position: result[0].geometry.location
+            });
+            marker2.addListener('click', function() {
+              meetinginfoWindow.open(map, marker2);
+            });
+
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+        marker.addListener('click', function() {
+          infoWindow.open(map, marker);
+        });
+
+      });
+      
+
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
     });
@@ -97,6 +128,7 @@ function initMap() {
       handleLocationError(false, infoWindow, map.getCenter());
   }
 }
+
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
