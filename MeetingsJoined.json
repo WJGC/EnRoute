@@ -6,7 +6,7 @@
 			"longitude": "long",
 			"meetingName": "Geisel",
 			"time": "2:00",
-			"finished" : "true"			
+			"finished" : "false"			
 		}
 	]
 }

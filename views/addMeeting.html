@@ -11,7 +11,7 @@
 	</head>
 	<body>
 
-		<form id="addMeetingForm" role="form" method="get" action="/add">
+		<form id="addMeetingForm" role="form" method="get" action="/addMeeting">
 
 			<h3>Choose Meeting Specifications</h3>
 
@@ -27,15 +27,17 @@
 
 			<p>Invite Friends</p>
 			<input class="inputField" id="friendName" type="text" placeholder="ex: Johnny">
-			<ul>
-				<li>Kyle</li>
-				<li>Glen</li>
-			</ul>
 
 			<p>Select Arrival Time(s) Notifications</p>
-	  			<input type="radio" name="ten" value="ten"> Friend is 10 min away <br>
-	  			<input type="radio" name="five" value="five"> Friend is 5 min away <br>
-	  			<input type="radio" name="two" value="two"> Friend is 2 min away <br>
+	  			<div class="radio">
+	  				<input type="radio" name="ten" value="ten"> Friend is 10 min away <br>
+	  			</div>
+	  			<div class="radio">
+	  				<input type="radio" name="five" value="five"> Friend is 5 min away <br>
+	  			</div>
+	  			<div class="radio">
+	  				<input type="radio" name="two" value="two"> Friend is 2 min away <br>
+	  			</div>
 
 	  			<br>
 

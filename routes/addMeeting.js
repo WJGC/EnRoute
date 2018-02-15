@@ -2,21 +2,21 @@
  * GET home page.
  */
 
-var meetings = require("../meetings.json");
+var meetingsCreated = require("../meetingsCreated.json");
 
 exports.addMeeting = function(req, res){
   var newMeeting = {
-  	"meetingLocation" : req.query.meetingLocation,
-  	"altitude" : req.query.altitude,
-  	"longitude" : req.query.longitude,
+  	//"meetingLocation" : req.query.meetingLocation,
+  	//"altitude" : req.query.altitude,
+  	//"longitude" : req.query.longitude,
   	"meetingName" : req.query.meetingName,
-  	"time" : req.query.time,
-  	"creator" : req.query.creator,
-  	"invited" : req.query.invited
+  	"time" : req.query.meetingTime,
+  	//"creator" : req.query.creator,
+  	"invited" : req.query.friendName
   }
 
-  meetings.meetings.push(newMeeting);
-  res.render('meetings', meetings);
+  meetingsCreated.meetings.push(newMeeting);
+  res.render('meetingsCreated', meetingsCreated);
 };
 
 /*exports.addMeeting = function(req, res){

@@ -22,9 +22,10 @@
 		</div>
 
 		<h3> List of Meetings You Have Joined </h3>
-		<ul>
+		<ul class="list-group">
 			{{#each meetingsJoined}}
-			<li>You have joined the meeting: {{meetingName}} at {{time}}</li>
+			{{if finished != true}}
+			<li class="list-group-item">You have joined the meeting: {{meetingName}} at {{time}}</li>
 			{{/each}}
 		</ul>
 
