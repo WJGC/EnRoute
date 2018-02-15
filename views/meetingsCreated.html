@@ -22,14 +22,12 @@
 		</div>
 
 		<h3 class="header"> List of Meetings You Have Created </h3>
-		<div class="under">
-		<ul class="list-group">
+		<ul>
 			{{#each meetingsCreated}}
 			{{if finished != true}}
-			<li class="list-group-item"> You created the meeting: {{meetingName}} at {{time}}</li>
+			<li> You created the meeting: {{meetingName}} at {{time}}</li>
 			{{/each}}
 		</ul>
-		</div>
 
 		<script src="/js/menu.js"></script>
 	</body>

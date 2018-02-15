@@ -21,11 +21,11 @@
   			</div>
 		</div>
 
-		<h3> List of Meetings You Have Joined </h3>
-		<ul class="list-group">
+		<h3 class="header"> List of Meetings You Have Joined </h3>
+		<ul>
 			{{#each meetingsJoined}}
 			{{if finished != true}}
-			<li class="list-group-item">You have joined the meeting: {{meetingName}} at {{time}}</li>
+			<li>You have joined the meeting: {{meetingName}} at {{time}}</li>
 			{{/each}}
 		</ul>
 

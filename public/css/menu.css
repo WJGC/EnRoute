@@ -57,11 +57,17 @@
 }
 
 ul {
-    margin-top: 5vw;
+  list-style-type: none;
+  margin-right: 5vw;
+  margin-top: 5vw;
 }
 
-.under {
-    z-index: 1;
+li {
+  padding:5px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px;
+  text-align: center;
 }
 
 #addMeetingButton {
@@ -78,3 +84,20 @@ ul {
 #addMeetingButton:hover, #addMeetingButton:focus {
     background-color: #2980B9;
 }
+ 
+#addFriendForm {
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+
+#friendsHeader{
+    margin-top: 5vw;
+    padding-top: 4vw;
+}
+
+#friendsList {
+    margin-top: 15vw;
+}
+
+
+

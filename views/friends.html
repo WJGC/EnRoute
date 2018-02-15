@@ -21,11 +21,11 @@
         </div>
     </div>
 
-    <h3 class="header">Friends</h3>
-    <h6>Your Friends List</h6>
-      <ul class="list-group">
+    <h3 id="friendsHeader" class="header">Friends</h3>
+      
+      <ul id="friendsList">
         {{#each friends}}
-        <li class="list-group-item">
+        <li>
           Username: {{username}} | Name: {{name}}
         </li>
         {{#each}}
