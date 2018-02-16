@@ -15,6 +15,6 @@ exports.meetingsJoined = function(req, res){
 			"time": "2:00",
 			"finished" : "false"			
 		}
-	]}
+	]});
   //res.render('meetings', meetingsJoined);
 };
