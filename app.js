@@ -40,10 +40,11 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/', meetings.view);
-app.get('/', friends.view);
-app.get('/', addFriend.addFriend);
-app.get('/', addMeeting.addMeeting);
+app.get('/meetingsCreated', meetings.view);
+app.get('/friends', friends.view);
+//app.get('/friends/addFriend', addFriend.addFriend);
+app.get('/addMeeting', addMeeting.addMeeting);
+
 // Example route
 // app.get('/users', user.list);
 
