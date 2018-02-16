@@ -15,8 +15,8 @@ exports.addMeeting = function(req, res){
   	"invited" : req.query.friendName
   }
 
-  meetingsCreated.meetings.push(newMeeting);
-  res.render('meetingsCreated', meetingsCreated);
+  meetingsCreated.meetingsCreated.push(newMeeting);
+  res.render('index', meetingsCreated);
 };
 
 /*exports.addMeeting = function(req, res){
