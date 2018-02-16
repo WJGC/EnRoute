@@ -10,6 +10,7 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var meetingsCreated = require('./routes/meetingsCreated');
+var meetingsJoined = require('./routes/meetingsJoined');
 var friends = require('./routes/friends');
 var addFriend = require('./routes/addFriend');
 var addMeeting = require('./routes/addMeeting')
@@ -40,7 +41,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/meetingsCreated', meetingsCreated.meetings);
+app.get('/meetingsCreated', meetingsCreated.meetingsCreated);
+app.get('/meetingsJoined', meetingsJoined.meetingsJoined);
 app.get('/friends', friends.view);
 //app.get('/friends/addFriend', addFriend.addFriend);
 app.get('/addMeeting', addMeeting.addMeeting);

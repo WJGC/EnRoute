@@ -14,9 +14,9 @@
   			<button id="dropbtn">Menu</button>
   			<div id="myDropdown" class="dropdown-content">
     			<a href="/">Home</a>
-    			<a href="/meetingsCreated">Meetings Created</a>
-    			<a href="meetingsJoined.html">Meetings Joined</a>
-    			<a href="friends.html">Friends</a>
+    			<a href="meetingsCreated">Meetings Created</a>
+    			<a href="meetingsJoined">Meetings Joined</a>
+    			<a href="friends">Friends</a>
     			<a href="profile.html">Profile</a>
   			</div>
 		</div>
@@ -24,7 +24,6 @@
 		<h3 class="header"> List of Meetings You Have Created </h3>
 		<ul>
 			{{#each meetingsCreated}}
-			{{if finished != true}}
 			<li> You created the meeting: {{meetingName}} at {{time}}</li>
 			{{/each}}
 		</ul>

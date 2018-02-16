@@ -1,49 +1,49 @@
 <!doctype html>
 
 <html>
-  <head>
-    <title>RUHereYet</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="/css/menu.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="dropdown">
-        <button id="dropbtn">Menu</button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="#">Home</a>
-          <a href="meetingsCreated.html">Meetings Created</a>
-          <a href="meetingsJoined.html">Meetings Joined</a>
-          <a href="friends.html">Friends</a>
-          <a href="profile.html">Profile</a>
-        </div>
+<head>
+  <title>RUHereYet</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="/css/menu.css" rel="stylesheet">
+</head>
+<body>
+  <div class="dropdown">
+    <button id="dropbtn">Menu</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Home</a>
+      <a href="meetingsCreated.html">Meetings Created</a>
+      <a href="meetingsJoined.html">Meetings Joined</a>
+      <a href="friends.html">Friends</a>
+      <a href="profile.html">Profile</a>
     </div>
+  </div>
 
-    <h3 id="friendsHeader" class="header">Friends</h3>
-      
-      <ul id="friendsList">
-        {{#each friends}}
-        <li>
-          Username: {{username}} | Name: {{name}}
-        </li>
-        {{#each}}
-      </ul>
+  <h3 id="friendsHeader" class="header">Friends</h3>
 
-    <form id="addFriendForm" role="form" method="get" action="/addFriend">
-      <h3>Add a friend</h3>
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" class="form-control" id="name" placeholder="Ex: John" name="name">
-        </div>
-        <div class="form-group">
-          <label for="username">Username:</label>
-          <input type="text" class="form-control" id="username" placeholder="Ex: JohnSmith1" name="username">
-        </div>
-        <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>
-    </form>
+  <ul id="friendsList">
+    {{#each friends}}
+    <li>
+      Name: {{name}} | Username: {{username}}
+    </li>
+    {{/each}}
+  </ul>
 
-    <script src="/js/menu.js"></script>
-  </body>
+  <form id="addFriendForm" role="form" method="get" action="/addFriend">
+    <h3>Add a friend</h3>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Ex: John" name="name">
+    </div>
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username" placeholder="Ex: JohnSmith1" name="username">
+    </div>
+    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>
+  </form>
+
+  <script src="/js/menu.js"></script>
+</body>
 </html>
