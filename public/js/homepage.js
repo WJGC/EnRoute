@@ -1,5 +1,8 @@
 
 //Javascript functions for homepage with map
+
+var meetingMarkers = [];
+
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 34.0522, lng: -118.2437},
@@ -24,10 +27,10 @@ function initMap() {
   // more details for that place.
   searchBox.addListener('places_changed', function() {
     var places = searchBox.getPlaces();
-
     if (places.length == 0) {
       return;
     }
+
 
     // Clear out the old markers.
     markers.forEach(function(marker) {
@@ -52,12 +55,16 @@ function initMap() {
       };
 
       // Create a marker for each place.
-      markers.push(new google.maps.Marker({
+      meetingMarkers.push(new google.maps.Marker({
         map: map,
-        icon: icon,
+        animation: google.maps.Animation.DROP,
         title: place.name,
         position: place.geometry.location
       }));
+
+      console.log(place.name);
+      console.log(place.formatted_address);
+      console.log(place.vicinity);
 
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
@@ -87,8 +94,10 @@ function initMap() {
 
       var marker = new google.maps.Marker({
           position: pos,
-          map: map
+          map: map,
+          animation: google.maps.Animation.DROP
       });
+
 
       
       // create location based on meeting set
@@ -106,11 +115,13 @@ function initMap() {
             map.setCenter(result[0].geometry.location);
             var marker2 = new google.maps.Marker({
                 map: map,
-                position: result[0].geometry.location
+                position: result[0].geometry.location,
+                animation: google.maps.Animation.DROP
             });
             marker2.addListener('click', function() {
               meetinginfoWindow.open(map, marker2);
             });
+            meetingMarkers.push(marker2);
 
           } else {
             alert('Geocode was not successful for the following reason: ' + status);
