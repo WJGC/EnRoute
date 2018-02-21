@@ -30,7 +30,7 @@ exports.addMeeting = function(req, res){
     }
 
     meetingsCreated.meetingsCreated.push(newMeeting);
-    res.render('index', meetingsCreated);
+    res.render('home', meetingsCreated);
   } else {
     alert("You have not added this friend!");
     res.render('addMeeting');
