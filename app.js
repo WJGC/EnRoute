@@ -44,7 +44,7 @@ app.get('/', index.view);
 app.get('/meetingsCreated', meetingsCreated.meetingsCreated);
 app.get('/meetingsJoined', meetingsJoined.meetingsJoined);
 app.get('/friends', friends.view);
-//app.get('/friends/addFriend', addFriend.addFriend);
+app.get('/addFriend', addFriend.addFriend);
 app.get('/addMeeting', addMeeting.addMeeting);
 
 // Example route
