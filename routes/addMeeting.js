@@ -21,11 +21,10 @@ exports.addMeeting = function(req, res){
   if(found) {
     var newMeeting = {
     	//"meetingLocation" : req.query.meetingLocation,
-    	//"altitude" : req.query.altitude,
-    	//"longitude" : req.query.longitude,
+    	"vicinity" : req.query.vicinity,
+    	"address" : req.query.address,
     	"meetingName" : req.query.meetingName,
     	"time" : req.query.meetingTime,
-    	//"creator" : req.query.creator,
     	"invited" : friend
     }
 

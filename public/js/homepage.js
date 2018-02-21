@@ -65,6 +65,9 @@ function initMap() {
       console.log(place.name);
       console.log(place.formatted_address);
       console.log(place.vicinity);
+      //called vicinity but changed to name
+      sessionStorage.setItem('vicinity', place.name);
+      sessionStorage.setItem('address', place.formatted_address);
 
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
