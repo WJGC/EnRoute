@@ -104,10 +104,10 @@ function initMap() {
 
       
       // create location based on meeting set
-        $.getJSON("../json/meetings.json", function(meetings) {
-
-        var searchString = meetings.meetings[0].meetingLocation;
-        var meetTime = meetings.meetings[0].time;
+        $.getJSON("../json/meetingsCreated.json", function(meetings) {
+        console.log(Object.keys(meetings.meetingsCreated).length);
+        var searchString = meetings.meetingsCreated[0].meetingLocation;
+        var meetTime = meetings.meetingsCreated[0].time;
         var geocoder = new google.maps.Geocoder();
         geocoder.geocode({
           'address': searchString
