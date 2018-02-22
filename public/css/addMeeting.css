@@ -1,5 +1,5 @@
 .inputField {
-	width: 40%;
+	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	box-sizing: border-box;
@@ -7,6 +7,12 @@
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
+	float:right;
+	margin-left: 100%;
+}
+
+.label {
+	width: 30%;
 }
 
 
@@ -19,6 +25,15 @@
 	
 }
 
+#checkbox {
+	
+	margin-right: 30%;
+}
+
+.btn{
+	width:49%;
+}
+
 body {
 	margin-left: 6vw;
 	margin-right: 6vw;
@@ -26,5 +41,6 @@ body {
 }
 
 .p{
-	font-size: 2px;
+	font-size: 100px;
+	font-weight: bold;
 }

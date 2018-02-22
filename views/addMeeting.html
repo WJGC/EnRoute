@@ -18,6 +18,9 @@
 			<div id="meetingPlace">	
 			</div>
 
+				<br>
+				<br>
+
 			<div>
 				<input type="hidden" id="vicinity" name="vicinity" value="">
 				<input type="hidden" id="address" name="address" value="">
@@ -28,15 +31,24 @@
 	          <input type="text" class="inputField form-control" id="meetingName" placeholder="Name" name="meetingName">
 	        </div>
 
+	        <br>
+
 			<div class="form-group">
 	          <label for="meetingTime">Meeting Time:</label>
 	          <input type="text" class="inputField form-control" id="meetingTime" placeholder="00:00" name="meetingTime">
 	        </div>
 
-			<p>Invite Friends</p>
-			<input class="inputField" id="friendName" type="text" placeholder="ex: Johnny">
+	        <br>
 
-			<p>Select Arrival Time(s) Notifications</p>
+	        <div>
+			<label for= "inviteFriends">Invite Friends:</label>
+			<input class="inputField" id="friendName" type="text" placeholder="ex: Johnny">
+			</div>
+
+			<br>
+			<br>
+
+			<label for= "selectArivals">Select Arrival Time(s) Notifications:</label>
 	  			<div>
 	  				<input type="checkbox" id="ten" name="ten" value="ten"> Friend is 10 min away <br>
 	  			</div>
@@ -48,11 +60,14 @@
 	  			</div>
 
 	  			<br>
+	  	
 
+	  		<div>
 	  			<input type="submit" id="submitBtn" class="btn btn-default" value="Add the Meeting"></input>
   		</form>
-		<br>
 		<button id="cancel" class="btn btn-default" type="button">Cancel</button>
+
+			</div>
 
 		<script src="/js/addMeeting.js"></script>
 	</body>
