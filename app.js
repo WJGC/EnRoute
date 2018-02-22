@@ -54,4 +54,4 @@ app.get('/addMeeting', addMeeting.addMeeting);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
-}).listen(process.env.PORT || app.get('port'));
+});//.listen(process.env.PORT || app.get('port'));
