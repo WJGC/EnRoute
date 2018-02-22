@@ -2,7 +2,7 @@
  * GET home page.
  */
 
-var meetingsCreated = require("../meetingsCreated.json");
+var meetingsCreated = require("../public/json/meetingsCreated.json");
 var friendsList = require("../friends.json");
 
 exports.addMeeting = function(req, res){
