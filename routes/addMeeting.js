@@ -21,7 +21,7 @@ exports.addMeeting = function(req, res){
   //if(found) {
     var newMeeting = {
     	//"meetingLocation" : req.query.meetingLocation,
-    	"vicinity" : req.query.vicinity,
+    	"meetingLocation" : req.query.vicinity,
     	"address" : req.query.address,
     	"meetingName" : req.query.meetingName,
     	"time" : req.query.meetingTime,
