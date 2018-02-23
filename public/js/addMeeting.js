@@ -17,10 +17,10 @@ document.getElementById("address").value = address;
 navigate back to homepage and pass values for new meeting */
 $("#submitBtn").click(function(){
 	sessionStorage.setItem('activeMeeting', 'true');
-	let ten = $("#ten").checked;
-	let five = $("#five").checked;
-	let two = $("#two").checked;
-	let friend = $("#friendName").value;
+	let ten = document.getElementById("ten").checked;
+	let five = document.getElementById("five").checked;
+	let two = document.getElementById("two").checked;
+	let friend = document.getElementById("friendName").value;
 	
 	sessionStorage.setItem('friendName', friend);
 
