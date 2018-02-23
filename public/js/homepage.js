@@ -185,8 +185,15 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 document.getElementById("addMeetingButton").addEventListener("click",function(){
-  console.log("addMeeting");
-  window.location.href = "addMeeting.html";
+  //console.log("addMeeting");
+  var input = document.getElementById('pac-input').value;
+  //var searchBox = new google.maps.places.SearchBox(input);
+  //var places = searchBox.getPlaces();
+  if (input == '') {
+      alert("You need to search a location first!");
+  } else {
+    window.location.href = "addMeeting.html";
+  }
 });
 
 
