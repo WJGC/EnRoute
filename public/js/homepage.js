@@ -111,7 +111,8 @@ function initMap() {
         },function (result,status) {
           if (status == 'OK') {
             var meetinginfoWindow = new google.maps.InfoWindow;
-            meetinginfoWindow.setContent("You have a meeting at " + searchString + ", at " + meetTime);
+            //meetinginfoWindow.setContent("You have a meeting at " + searchString + ", at " + meetTime);
+            meetinginfoWindow.setContent("You have a meeting here, check meetings created for info";
             map.setCenter(result[0].geometry.location);
             var marker = new google.maps.Marker({
               map:map,
