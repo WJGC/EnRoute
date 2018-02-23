@@ -12,9 +12,13 @@
 	<body>
 
 		<form id="addMeetingForm" role="form" method="get" action="/addMeeting">
+			<div>
+			<button id="cancel" class="btn btn-default" type="button">Cancel</button>
 
-			<h3>Choose Meeting Specifications</h3>
-
+			<h3>Meeting Specifications</h3>
+			</div>
+			 <br>
+			 <br>
 			<div id="meetingPlace">	
 			</div>
 
@@ -64,10 +68,12 @@
 
 	  		<div>
 	  			<input type="submit" id="submitBtn" class="btn btn-default" value="Add the Meeting"></input>
-  		</form>
-		<button id="cancel" class="btn btn-default" type="button">Cancel</button>
+  		
+		
 
 			</div>
+
+		</form>
 
 		<script src="/js/addMeeting.js"></script>
 	</body>

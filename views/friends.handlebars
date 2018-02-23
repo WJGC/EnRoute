@@ -8,6 +8,7 @@
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/menu.css" rel="stylesheet">
+  <link href="/css/friends.css" rel="stylesheet">
 </head>
 <body>
   <div class="dropdown">
@@ -28,11 +29,13 @@
     <li>
       Name: {{name}} | Username: {{username}}
     </li>
+    <br>
     {{/each}}
+    <br>
   </ul>
 
   <form id="addFriendForm" role="form" method="get" action="/addFriend">
-    <h3>Add a friend</h3>
+    <h4>Add a friend</h4>
     <div class="form-group">
       <label for="name">Name:</label>
       <input type="text" class="form-control" id="name" placeholder="Ex: John" name="name">

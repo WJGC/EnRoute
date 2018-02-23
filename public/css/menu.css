@@ -6,6 +6,12 @@
     top: 45vw;
 }
 
+body {
+    background-color: #FFFFFE;
+ 
+
+}
+
 /* Dropdown Button */
 #dropbtn {
     color: black;
@@ -14,6 +20,7 @@
     cursor: pointer;
     border-radius: 10px;
 }
+
 
 /* Dropdown button on hover & focus */
 #dropbtn:hover, #dropbtn:focus {
@@ -24,6 +31,7 @@
 .dropdown {
     position: fixed;
     display: inline-block;
+    margin-top: -5vw;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -50,24 +58,49 @@
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
+h4 {
+    text-align: center;
+}
+
 .header {
     margin-left: 30vw;
     margin-right: 5vw;
     text-align: center;
 }
 
+.headerMC {
+    margin-left: 15%;
+    margin-top: 10vw;
+    text-align: center;
+    font-weight: bold;
+}
+
 ul {
   list-style-type: none;
+  float: left;
+  text-align: left;
+
+
   margin-right: 5vw;
   margin-top: 5vw;
 }
 
 li {
-  padding:5px;
+  padding:13px;
   border-color: black;
-  border-style: solid;
-  border-radius: 10px;
+  border-style: double;
+  border-radius: 4px;
   text-align: center;
+  width: 100%;
+
+}
+
+#meetingList{
+    width: 90%;
+}
+
+#joinedMeetings{
+    width: 90%;
 }
 
 #addMeetingButton {
@@ -99,5 +132,17 @@ li {
     margin-top: 15vw;
 }
 
+#submitBtn {
+    width: 100%;
+}
 
+#friendsHeader{
+    margin-right: 20%;
+
+
+}
+
+#instruction {
+    margin-top: -2vw;
+}
 

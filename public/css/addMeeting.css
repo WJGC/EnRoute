@@ -11,6 +11,10 @@
 	margin-left: 100%;
 }
 
+body {
+	 background-color: #FFFFFE;
+}
+
 .label {
 	width: 30%;
 }
@@ -30,8 +34,19 @@
 	margin-right: 30%;
 }
 
-.btn{
-	width:49%;
+#cancel{
+	margin-top: 4vw;
+	width:20%;
+}
+
+h3{
+	text-align: center;
+	margin-right: 4vw;
+	float:right;
+}
+
+#submitBtn{
+	width:100%;
 }
 
 body {
