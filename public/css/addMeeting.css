@@ -12,7 +12,7 @@
 }
 
 body {
-	 background-color: #FFFFFE;
+	 background-color: #F0F8FF;
 }
 
 .label {
@@ -25,7 +25,8 @@ body {
 	margin-right: 0%;
 }
 
-#cancel {
+#meetingPlace {
+	text-align: center;
 	
 }
 
