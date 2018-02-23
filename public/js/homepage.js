@@ -168,6 +168,7 @@ var activeMeeting = sessionStorage.getItem('activeMeeting');
 var ten = sessionStorage.getItem('ten');
 var five = sessionStorage.getItem('five');
 var two = sessionStorage.getItem('two');
+var friendName = sessionStorage.getItem('friendName');
 console.log(activeMeeting);
   console.log(ten);
   console.log(five);
@@ -178,35 +179,42 @@ if(activeMeeting == 'true') {
   sessionStorage.setItem('ten', 'false');
   sessionStorage.setItem('five', 'false');
   sessionStorage.setItem('two', 'false');
+  sessionStorage.setItem('friendName', '');
     
   
   if(window.Notification && Notification.permission !== "granted") {
     Notification.requestPermission();
   } else {
     //ten minute notification  
-    if(ten) {
+    if(ten == 'true') {
       setTimeout(function(){
         var n = new Notification('RUHereYet', { 
-          body: 'Kyle is 10 minutes away!',
+          body: friendName + ' is 10 minutes away!',
         }); 
+        /*var audio = new Audio('audio_file.mp3');
+        audio.play();*/
       }, 10000);
     }
 
     //five minute notification
-    if(five) {
+    if(five == 'true') {
       setTimeout(function(){
         var n = new Notification('RUHereYet', { 
-          body: 'Kyle is 5 minutes away!',
+          body: friendName + ' is 5 minutes away!',
         }); 
+        /*var audio = new Audio('audio_file.mp3');
+        audio.play();*/
       }, 20000);
     }
 
     //two minute notification
-    if(two) {
+    if(two == 'true') {
       setTimeout(function(){
         var n = new Notification('RUHereYet', { 
-          body: 'Kyle is 2 minutes away!',
+          body: friendName + ' is 2 minutes away!',
         }); 
+        /*var audio = new Audio('audio_file.mp3');
+        audio.play();*/
       }, 30000);
     }
   }
