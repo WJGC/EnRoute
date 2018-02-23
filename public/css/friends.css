@@ -10,9 +10,10 @@
 	box-sizing: border-box;
 }
 
-h3{
+#friendsHeader{
 	text-align: center;
 	font-weight: bold;
+	margin-top: -15vw;
 }
 
 
@@ -28,6 +29,13 @@ h3{
 	width: 90%;
 
 	
+}
+
+
+.dropdownF {
+	margin-left: -2vw;
+	margin-top: -2vw;
+
 }
 
 body {
