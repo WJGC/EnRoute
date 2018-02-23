@@ -33,10 +33,10 @@ function initMap() {
 
 
     // Clear out the old markers.
-    markers.forEach(function(marker) {
+    /*markers.forEach(function(marker) {
       marker.setMap(null);
     });
-    markers = [];
+    markers = [];*/
 
     // For each place, get the icon, name and location.
     var bounds = new google.maps.LatLngBounds();
@@ -101,13 +101,40 @@ function initMap() {
           animation: google.maps.Animation.DROP
       });
 
+      var pings = document.getElementsByClassName("pings");
+      for( var i = 0; i < pings.length; i++ ) {
+        var searchString = pings[i].id;
+        var meetTime = pings[i].innerHTML;
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({
+          'address':searchString
+        },function (result,status) {
+          if (status == 'OK') {
+            var meetinginfoWindow = new google.maps.InfoWindow;
+            //meetinginfoWindow.setContent("You have a meeting at " + searchString + ", at " + meetTime);
+            meetinginfoWindow.setContent("You have a meeting here, check meetings created for info");
+            map.setCenter(result[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map:map,
+              position: result[0].geometry.location,
+              animation: google.maps.Animation.DROP
+            });
+            marker.addListener('click', function() {
+              meetinginfoWindow.open(map,marker);
+            });
+
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
 
       
       // create location based on meeting set
-        $.getJSON("../json/meetings.json", function(meetings) {
-
-        var searchString = meetings.meetings[0].meetingLocation;
-        var meetTime = meetings.meetings[0].time;
+        /*$.getJSON("../json/meetingsCreated.json", function(meetings) {
+        console.log(Object.keys(meetings.meetingsCreated).length);
+        var searchString = meetings.meetingsCreated[0].meetingLocation;
+        var meetTime = meetings.meetingsCreated[0].time;
         var geocoder = new google.maps.Geocoder();
         geocoder.geocode({
           'address': searchString
@@ -134,7 +161,7 @@ function initMap() {
           infoWindow.open(map, marker);
         });
 
-      });
+      });*/
       
 
     }, function() {
@@ -158,8 +185,15 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 document.getElementById("addMeetingButton").addEventListener("click",function(){
-  console.log("addMeeting");
-  window.location.href = "addMeeting.html";
+  //console.log("addMeeting");
+  var input = document.getElementById('pac-input').value;
+  //var searchBox = new google.maps.places.SearchBox(input);
+  //var places = searchBox.getPlaces();
+  if (input == '') {
+      alert("You need to search a location first!");
+  } else {
+    window.location.href = "addMeeting.html";
+  }
 });
 
 
@@ -168,57 +202,54 @@ var activeMeeting = sessionStorage.getItem('activeMeeting');
 var ten = sessionStorage.getItem('ten');
 var five = sessionStorage.getItem('five');
 var two = sessionStorage.getItem('two');
+var friendName = sessionStorage.getItem('friendName');
 console.log(activeMeeting);
+  console.log(ten);
+  console.log(five);
+  console.log(two);
 
 if(activeMeeting == 'true') {
   sessionStorage.setItem('activeMeeting', 'false');
   sessionStorage.setItem('ten', 'false');
   sessionStorage.setItem('five', 'false');
   sessionStorage.setItem('two', 'false');
+  sessionStorage.setItem('friendName', '');
     
-  //ten minute notification  
-  if(ten) {
-    setTimeout(function(){
-      if(window.Notification && Notification.permission !== "denied") {
-        Notification.requestPermission(function(status) {  // status is "granted", if accepted by user
-          var n = new Notification('RUHereYet', { 
-            body: 'Kyle is 10 minutes away!',
-          }); 
-        });
-      }
-    }, 10000);
-    /*if(window.Notification && Notification.permission !== "denied") {
-      Notification.requestPermission(function(status) {  // status is "granted", if accepted by user
+  
+  if(window.Notification && Notification.permission !== "granted") {
+    Notification.requestPermission();
+  } else {
+    //ten minute notification  
+    if(ten == 'true') {
+      setTimeout(function(){
         var n = new Notification('RUHereYet', { 
-          body: 'Kyle is 10 minutes away!',
+          body: friendName + ' is 10 minutes away!',
         }); 
-      });
-    }*/
-  }
+        var audio = new Audio('../Rings/ten_min.mp3');
+        audio.play();
+      }, 10000);
+    }
 
-  //five minute notification
-  if(five) {
-    setTimeout(function(){
-      if(window.Notification && Notification.permission !== "denied") {
-        Notification.requestPermission(function(status) {  // status is "granted", if accepted by user
-          var n = new Notification('RUHereYet', { 
-            body: 'Kyle is 5 minutes away!',
-          }); 
-        });
-      }
-    }, 20000);
-  }
+    //five minute notification
+    if(five == 'true') {
+      setTimeout(function(){
+        var n = new Notification('RUHereYet', { 
+          body: friendName + ' is 5 minutes away!',
+        }); 
+        var audio = new Audio('../Rings/five_min.mp3');
+        audio.play();
+      }, 30000);
+    }
 
-  //two minute notification
-  if(two) {
-    setTimeout(function(){
-      if(window.Notification && Notification.permission !== "denied") {
-        Notification.requestPermission(function(status) {  // status is "granted", if accepted by user
-          var n = new Notification('RUHereYet', { 
-            body: 'Kyle is 2 minutes away!',
-          }); 
-        });
-      }
-    }, 30000);
+    //two minute notification
+    if(two == 'true') {
+      setTimeout(function(){
+        var n = new Notification('RUHereYet', { 
+          body: friendName + ' is 2 minutes away!',
+        }); 
+        var audio = new Audio('../Rings/two_min.wav');
+        audio.play();
+      }, 50000);
+    }
   }
 }

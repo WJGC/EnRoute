@@ -20,6 +20,14 @@ document.getElementById("submitBtn").addEventListener("click",function(){
 	let ten = document.getElementById("ten").checked;
 	let five = document.getElementById("five").checked;
 	let two = document.getElementById("two").checked;
+	let friend = document.getElementById("friendName").value;
+	
+	sessionStorage.setItem('friendName', friend);
+
+	console.log(ten);
+	console.log(five);
+	console.log(two);
+
 	if(ten) {
 		sessionStorage.setItem('ten', 'true');
 	} else {

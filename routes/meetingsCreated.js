@@ -3,7 +3,7 @@
  * GET home page.
  */
 
-var meetingsCreated = require("../meetingsCreated.json");
+var meetingsCreated = require("../public/json/meetingsCreated.json");
 //var meetingsJoined = require("../meetingsJoined.json");
 
 exports.meetingsCreated = function(req, res){
