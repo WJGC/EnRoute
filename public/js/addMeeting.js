@@ -8,10 +8,10 @@ $("#cancel").click(function(){
 /* set meeting place */
 let vicinity = sessionStorage.getItem("vicinity");
 let address = sessionStorage.getItem("address");
-document.getElementById("meetingPlace").innerHTML = "Meeting will be set at " + vicinity;
+$("#meetingPlace").html("Meeting will be set at " + vicinity);
 
-$("#vicinity").value = vicinity;
-$("#address").value = address;
+document.getElementById("vicinity").value = vicinity;
+document.getElementById("address").value = address;
 
 /* When the user clicks on add Meeting 
 navigate back to homepage and pass values for new meeting */
