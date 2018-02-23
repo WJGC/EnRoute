@@ -34,6 +34,10 @@ body {
     margin-top: -5vw;
 }
 
+.dropdownMC {
+    margin-top: 0vw;
+}
+
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
@@ -70,9 +74,16 @@ h4 {
 
 .headerMC {
     margin-left: 15%;
-    margin-top: 10vw;
+    margin-top: -10vw;
     text-align: center;
     font-weight: bold;
+}
+
+.headerJM {
+    margin-left: 15%;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5vw;
 }
 
 ul {
