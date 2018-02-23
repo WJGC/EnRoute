@@ -112,7 +112,7 @@ function initMap() {
           if (status == 'OK') {
             var meetinginfoWindow = new google.maps.InfoWindow;
             //meetinginfoWindow.setContent("You have a meeting at " + searchString + ", at " + meetTime);
-            meetinginfoWindow.setContent("You have a meeting here, check meetings created for info";
+            meetinginfoWindow.setContent("You have a meeting here, check meetings created for info");
             map.setCenter(result[0].geometry.location);
             var marker = new google.maps.Marker({
               map:map,
@@ -218,8 +218,8 @@ if(activeMeeting == 'true') {
         var n = new Notification('RUHereYet', { 
           body: friendName + ' is 10 minutes away!',
         }); 
-        /*var audio = new Audio('audio_file.mp3');
-        audio.play();*/
+        var audio = new Audio('../Rings/ten_min.mp3');
+        audio.play();
       }, 10000);
     }
 
@@ -229,9 +229,9 @@ if(activeMeeting == 'true') {
         var n = new Notification('RUHereYet', { 
           body: friendName + ' is 5 minutes away!',
         }); 
-        /*var audio = new Audio('audio_file.mp3');
-        audio.play();*/
-      }, 20000);
+        var audio = new Audio('../Rings/five_min.mp3');
+        audio.play();
+      }, 30000);
     }
 
     //two minute notification
@@ -240,9 +240,9 @@ if(activeMeeting == 'true') {
         var n = new Notification('RUHereYet', { 
           body: friendName + ' is 2 minutes away!',
         }); 
-        /*var audio = new Audio('audio_file.mp3');
-        audio.play();*/
-      }, 30000);
+        var audio = new Audio('../Rings/two_min.wav');
+        audio.play();
+      }, 50000);
     }
   }
 }
