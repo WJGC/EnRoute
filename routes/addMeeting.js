@@ -26,7 +26,7 @@ exports.addMeeting = function(req, res){
     	"meetingName" : req.query.meetingName,
     	"time" : req.query.meetingTime,
     	"invited" : friend
-    //}
+    }
 
     meetingsCreated.meetingsCreated.push(newMeeting);
     res.render('home', meetingsCreated);
