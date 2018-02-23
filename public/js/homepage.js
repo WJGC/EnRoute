@@ -169,6 +169,9 @@ var ten = sessionStorage.getItem('ten');
 var five = sessionStorage.getItem('five');
 var two = sessionStorage.getItem('two');
 console.log(activeMeeting);
+  console.log(ten);
+  console.log(five);
+  console.log(two);
 
 if(activeMeeting == 'true') {
   sessionStorage.setItem('activeMeeting', 'false');
@@ -176,49 +179,35 @@ if(activeMeeting == 'true') {
   sessionStorage.setItem('five', 'false');
   sessionStorage.setItem('two', 'false');
     
-  //ten minute notification  
-  if(ten) {
-    setTimeout(function(){
-      if(window.Notification && Notification.permission !== "denied") {
-        Notification.requestPermission(function(status) {  // status is "granted", if accepted by user
-          var n = new Notification('RUHereYet', { 
-            body: 'Kyle is 10 minutes away!',
-          }); 
-        });
-      }
-    }, 10000);
-    /*if(window.Notification && Notification.permission !== "denied") {
-      Notification.requestPermission(function(status) {  // status is "granted", if accepted by user
+  
+  if(window.Notification && Notification.permission !== "granted") {
+    Notification.requestPermission();
+  } else {
+    //ten minute notification  
+    if(ten) {
+      setTimeout(function(){
         var n = new Notification('RUHereYet', { 
           body: 'Kyle is 10 minutes away!',
         }); 
-      });
-    }*/
-  }
+      }, 10000);
+    }
 
-  //five minute notification
-  if(five) {
-    setTimeout(function(){
-      if(window.Notification && Notification.permission !== "denied") {
-        Notification.requestPermission(function(status) {  // status is "granted", if accepted by user
-          var n = new Notification('RUHereYet', { 
-            body: 'Kyle is 5 minutes away!',
-          }); 
-        });
-      }
-    }, 20000);
-  }
+    //five minute notification
+    if(five) {
+      setTimeout(function(){
+        var n = new Notification('RUHereYet', { 
+          body: 'Kyle is 5 minutes away!',
+        }); 
+      }, 20000);
+    }
 
-  //two minute notification
-  if(two) {
-    setTimeout(function(){
-      if(window.Notification && Notification.permission !== "denied") {
-        Notification.requestPermission(function(status) {  // status is "granted", if accepted by user
-          var n = new Notification('RUHereYet', { 
-            body: 'Kyle is 2 minutes away!',
-          }); 
-        });
-      }
-    }, 30000);
+    //two minute notification
+    if(two) {
+      setTimeout(function(){
+        var n = new Notification('RUHereYet', { 
+          body: 'Kyle is 2 minutes away!',
+        }); 
+      }, 30000);
+    }
   }
 }
