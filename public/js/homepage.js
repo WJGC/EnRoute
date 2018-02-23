@@ -33,10 +33,10 @@ function initMap() {
 
 
     // Clear out the old markers.
-    markers.forEach(function(marker) {
+    /*markers.forEach(function(marker) {
       marker.setMap(null);
     });
-    markers = [];
+    markers = [];*/
 
     // For each place, get the icon, name and location.
     var bounds = new google.maps.LatLngBounds();
@@ -101,10 +101,36 @@ function initMap() {
           animation: google.maps.Animation.DROP
       });
 
+      var pings = document.getElementsByClassName("pings");
+      for( var i = 0; i < pings.length; i++ ) {
+        var searchString = pings[i].id;
+        var meetTime = pings[i].innerHTML;
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({
+          'address':searchString
+        },function (result,status) {
+          if (status == 'OK') {
+            var meetinginfoWindow = new google.maps.InfoWindow;
+            meetinginfoWindow.setContent("You have a meeting at " + searchString + ", at " + meetTime);
+            map.setCenter(result[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map:map,
+              position: result[0].geometry.location,
+              animation: google.maps.Animation.DROP
+            });
+            marker.addListener('click', function() {
+              meetinginfoWindow.open(map,marker);
+            });
+
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
 
       
       // create location based on meeting set
-        $.getJSON("../json/meetingsCreated.json", function(meetings) {
+        /*$.getJSON("../json/meetingsCreated.json", function(meetings) {
         console.log(Object.keys(meetings.meetingsCreated).length);
         var searchString = meetings.meetingsCreated[0].meetingLocation;
         var meetTime = meetings.meetingsCreated[0].time;
@@ -134,7 +160,7 @@ function initMap() {
           infoWindow.open(map, marker);
         });
 
-      });
+      });*/
       
 
     }, function() {
