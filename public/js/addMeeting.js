@@ -23,6 +23,9 @@ $("#submitBtn").click(function(){
 	let friend = document.getElementById("friendName").value;
 	
 	sessionStorage.setItem('friendName', friend);
+	sessionStorage.setItem('ten', 'false');
+	sessionStorage.setItem('five', 'false');
+	sessionStorage.setItem('two', 'false');
 
 	console.log(ten);
 	console.log(five);
