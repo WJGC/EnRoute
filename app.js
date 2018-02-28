@@ -15,6 +15,7 @@ var meetingsJoined = require('./routes/meetingsJoined');
 var friends = require('./routes/friends');
 var addFriend = require('./routes/addFriend');
 var addMeeting = require('./routes/addMeeting')
+var signup = require('./routes/signup');
 // Example route
 // var user = require('./routes/user');
 
@@ -48,6 +49,7 @@ app.get('/meetingsJoined', meetingsJoined.meetingsJoined);
 app.get('/friends', friends.view);
 app.get('/addFriend', addFriend.addFriend);
 app.get('/addMeeting', addMeeting.addMeeting);
+app.get('/signedup', signup.addUser);
 
 // Example route
 // app.get('/users', user.list);
