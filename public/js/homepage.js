@@ -209,12 +209,7 @@ console.log(activeMeeting);
   console.log(two);
 
 if(activeMeeting == 'true') {
-  sessionStorage.setItem('activeMeeting', 'false');
-  sessionStorage.setItem('ten', 'false');
-  sessionStorage.setItem('five', 'false');
-  sessionStorage.setItem('two', 'false');
-  sessionStorage.setItem('friendName', '');
-    
+  sessionStorage.setItem('activeMeeting', 'false');  
   
   if(window.Notification && Notification.permission !== "granted") {
     Notification.requestPermission();

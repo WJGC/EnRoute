@@ -1,6 +1,6 @@
 /* When the user clicks on cancel 
 navigate back to homepage */
-document.getElementById("cancel").addEventListener("click",function(){
+$("#cancel").click(function(){
   window.location.href = "/home";
 });
 
@@ -8,14 +8,14 @@ document.getElementById("cancel").addEventListener("click",function(){
 /* set meeting place */
 let vicinity = sessionStorage.getItem("vicinity");
 let address = sessionStorage.getItem("address");
-document.getElementById("meetingPlace").innerHTML = "Meeting will be set at " + vicinity;
+$("#meetingPlace").html("Meeting will be set at " + vicinity);
 
 document.getElementById("vicinity").value = vicinity;
 document.getElementById("address").value = address;
 
 /* When the user clicks on add Meeting 
 navigate back to homepage and pass values for new meeting */
-document.getElementById("submitBtn").addEventListener("click",function(){
+$("#submitBtn").click(function(){
 	sessionStorage.setItem('activeMeeting', 'true');
 	let ten = document.getElementById("ten").checked;
 	let five = document.getElementById("five").checked;
@@ -23,6 +23,9 @@ document.getElementById("submitBtn").addEventListener("click",function(){
 	let friend = document.getElementById("friendName").value;
 	
 	sessionStorage.setItem('friendName', friend);
+	sessionStorage.setItem('ten', 'false');
+	sessionStorage.setItem('five', 'false');
+	sessionStorage.setItem('two', 'false');
 
 	console.log(ten);
 	console.log(five);
