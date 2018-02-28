@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>RUHereYet</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="/css/homepageB.css" rel="stylesheet">
+		<link href="/css/menuB.css" rel="stylesheet">
+		<link href="/css/material-kit.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!--<div id="instruction">
+			Search Your Meeting's Location!
+		</div>-->
+
+		<button id="profileButton">User Profile</button>
+		<button id="MeetingButton">Meetings</button>
+		<button id="FriendsButton">My Friends</button>
+		<button id="addMeetingButton">Add Meeting</button>
+
+   		<div class="searchBarHolder">
+     		<input id="pac-input" class="controls" type="text" placeholder="Meet at a Location...">
+     	</div>
+     	
+     	<div id="map"></div> 
+
+     	{{#each meetingsCreated}}
+			<div class="pings" id="{{meetingLocation}}">{{time}}</div>
+		{{/each}}
+
+
+     	<!--   Core JS Files   -->
+		<script src="/js/jquery.min.js" type="text/javascript"></script>
+		<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="/js/material.min.js"></script>
+
+		<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+		<script src="/js/nouislider.min.js" type="text/javascript"></script>
+
+		<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+		<script src="/js/bootstrap-datepicker.js" type="text/javascript"></script>
+
+		<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+		<script src="/js/material-kit.js" type="text/javascript"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0WRQl-Hgot5KsHhaHU9zLo4SgK5nL6M4&libraries=places&callback=initMap"
+      		async defer></script>
+
+	    <script src="/js/homepageB.js"></script>
+	    <!--<script src="/js/menu.js"></script>-->
+	</body>
+</html>
