@@ -181,6 +181,10 @@ function initMap() {
           animation: google.maps.Animation.DROP
       });
 
+      marker.addListener('click', function() {
+        infoWindow.open(map,marker);
+      });
+
       var pings = document.getElementsByClassName("pings");
       for( var i = 0; i < pings.length; i++ ) {
         var searchString = pings[i].id;
@@ -279,7 +283,7 @@ document.getElementById("addMeetingButton").addEventListener("click",function(){
 /* When the user clicks on the button Profile,
  go to the profile page*/
 document.getElementById("profileButton").addEventListener("click",function(){
-  window.location.href = "profile.html";
+  window.location.href = "profileB.html";
 });
 
 document.getElementById("FriendsButton").addEventListener("click", function(){

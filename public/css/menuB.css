@@ -74,7 +74,7 @@ h4 {
 
 .headerMC {
     margin-left: 20%;
-    margin-top: -12vw;
+    margin-top: 0vw;
     text-align: center;
     font-weight: bold;
     font-size: 30px;
@@ -132,7 +132,7 @@ li {
     z-index: 1;
     position: fixed;
     left: 1vw;
-    top: 12vw;
+    top: 13vw;
     font-size: 25px;
     padding: 15px;
     border-radius: 20px;
@@ -152,7 +152,7 @@ li {
     z-index: 1;
     position: fixed;
     right: 1vw;
-    top: 12vw;
+    top: 13vw;
     font-size: 25px;
     padding: 15px;
     border-radius: 20px;
@@ -195,4 +195,49 @@ li {
 
 .listElements {
     background-color:white;
+}
+
+#backbtn {
+    z-index: 1; 
+    position: fixed; 
+    left: 1vw; 
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 10px;   
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    margin-top: 15vw;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }

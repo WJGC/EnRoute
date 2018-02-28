@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>RUHereYet</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="/css/menuB.css" rel="stylesheet">
+	</head>
+	<body>
+
+		<a href="/home" id= "backbtn" class="btn btn-default">Back</a>
+
+		<div class="tab">
+  			<button class="tablinks active" onclick="listMeeting(event, 'created')">Meetings Created</button>
+  			<button class="tablinks" onclick="listMeeting(event, 'joined')">Meetings Joined</button>
+		</div>
+
+		<div id="created" class="tabcontent" style="display:block">
+			{{#each meetingsCreated}}
+			<li class = "listElements"> You created the meeting: {{meetingName}} at {{time}}</li>
+			<br>
+			{{/each}}
+		<div>
+
+		<div id="joined" class="tabcontent">
+			{{#each meetingsJoined}}
+			<li class = "listElements">You have joined the meeting: {{meetingName}} at {{time}}</li>
+			{{/each}}
+		<div>
+
+		<!--<script src="/js/menu.js"></script>-->
+		<script src="js/meetingsCJ.js"></script>
+	</body>
+</html>
