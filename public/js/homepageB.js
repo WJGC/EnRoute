@@ -7,7 +7,7 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 34.0522, lng: -118.2437},
     zoom: 13,
-    mapTypeId: 'roadmap'
+    mapTypeId: 'roadmap',
     styles: [
       {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
       {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -276,6 +276,19 @@ document.getElementById("addMeetingButton").addEventListener("click",function(){
   }
 });
 
+/* When the user clicks on the button Profile,
+ go to the profile page*/
+document.getElementById("profileButton").addEventListener("click",function(){
+  window.location.href = "profile.html";
+});
+
+document.getElementById("FriendsButton").addEventListener("click", function(){
+  window.location.href = "friends";
+});
+
+document.getElementById("MeetingButton").addEventListener("click", function(){
+  window.location.href = "meetingsCreated";
+});
 
 //Wizard of Oz meeting triggers if session var set
 var activeMeeting = sessionStorage.getItem('activeMeeting');
