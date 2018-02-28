@@ -181,6 +181,10 @@ function initMap() {
           animation: google.maps.Animation.DROP
       });
 
+      marker.addListener('click', function() {
+        infoWindow.open(map,marker);
+      });
+
       var pings = document.getElementsByClassName("pings");
       for( var i = 0; i < pings.length; i++ ) {
         var searchString = pings[i].id;
@@ -287,7 +291,7 @@ document.getElementById("FriendsButton").addEventListener("click", function(){
 });
 
 document.getElementById("MeetingButton").addEventListener("click", function(){
-  window.location.href = "meetingsCreatedB";
+  window.location.href = "meetingsCreated";
 });
 
 //Wizard of Oz meeting triggers if session var set
