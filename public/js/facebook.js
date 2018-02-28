@@ -22,7 +22,4 @@ function changeUser(response) {
   sessionStorage.setItem('user', response.name);
   sessionStorage.setItem('profPic', response.picture.data.url);
   window.location.href = "/home";
-  /*$(".facebookLogin").hide();
-  $(".jumbotron>h1").text(response.name);
-  $("#photo").attr("src", response.picture.data.url);*/
 }
