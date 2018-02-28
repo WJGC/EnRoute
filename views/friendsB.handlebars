@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>RUHereYet</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="/css/menu.css" rel="stylesheet">
+  <link href="/css/friends.css" rel="stylesheet">
+</head>
+<body>
+
+  <a href="/home" id= "backbtn" class="btn btn-default">Back</a>
+
+  <h3 id="friendsHeader" class="header">Friends</h3>
+
+  <ul id="friendsList">
+    {{#each friends}}
+    <li class = "listElements">
+      Name: {{name}} | Username: {{username}}
+    </li>
+    <br>
+    {{/each}}
+    <br>
+  </ul>
+
+  <form id="addFriendForm" role="form" method="get" action="/addFriend">
+    <h4>Add a friend</h4>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Ex: John" name="name">
+    </div>
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username" placeholder="Ex: JohnSmith1" name="username">
+    </div>
+    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>
+  </form>
+
+  <!--<script src="/js/menuB.js"></script>-->
+</body>
+</html>

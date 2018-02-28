@@ -279,7 +279,7 @@ document.getElementById("addMeetingButton").addEventListener("click",function(){
 /* When the user clicks on the button Profile,
  go to the profile page*/
 document.getElementById("profileButton").addEventListener("click",function(){
-  window.location.href = "profile.html";
+  window.location.href = "profileB.html";
 });
 
 document.getElementById("FriendsButton").addEventListener("click", function(){
@@ -287,7 +287,7 @@ document.getElementById("FriendsButton").addEventListener("click", function(){
 });
 
 document.getElementById("MeetingButton").addEventListener("click", function(){
-  window.location.href = "meetingsCreated";
+  window.location.href = "meetingsCreatedB";
 });
 
 //Wizard of Oz meeting triggers if session var set
