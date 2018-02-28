@@ -17,6 +17,7 @@ var addFriend = require('./routes/addFriend');
 var addMeeting = require('./routes/addMeeting')
 var signup = require('./routes/signup');
 var logout = require('./routes/logout');
+var deleteMeeting = require('./routes/deleteMeeting');
 // Example route
 // var user = require('./routes/user');
 
@@ -52,6 +53,7 @@ app.get('/addFriend', addFriend.addFriend);
 app.get('/addMeeting', addMeeting.addMeeting);
 app.get('/signedup', signup.addUser);
 app.get('/logout', logout.logout);
+app.get('/deleteMeeting', deleteMeeting.delete);
 
 // Example route
 // app.get('/users', user.list);
