@@ -56,9 +56,17 @@ $("#SignInB").click(function(){
   }
 });
 
-
+//version A
 $("#GetStarted").click(function(){
 	sessionStorage.setItem('user', document.getElementById('SUusername').value);
   	sessionStorage.setItem('profPic', 'https://upload.wikimedia.org/wikipedia/commons/3/34/PICA.jpg');
  	//window.location.href = "/home";
+});
+
+
+//version B
+$("#GetStartedB").click(function(){
+  sessionStorage.setItem('user', document.getElementById('SUusername').value);
+    sessionStorage.setItem('profPic', 'https://upload.wikimedia.org/wikipedia/commons/3/34/PICA.jpg');
+  //window.location.href = "/home";
 });
