@@ -13,7 +13,11 @@
 	</head>
 	<body>
 
+		{{#if viewAlt}}
+		<form id="addMeetingForm" role="form" method="get" action="/addMeetingB">
+		{{else}}
 		<form id="addMeetingForm" role="form" method="get" action="/addMeeting">
+		{{/if}}
 			<div>
 			<button id="cancel" class="btn btn-default" type="button">Cancel</button>
 
@@ -76,6 +80,6 @@
 
 		</form>
 
-		<script src="/js/addMeeting.js"></script>
+		<script src="/js/createMeeting.js"></script>
 	</body>
 </html>

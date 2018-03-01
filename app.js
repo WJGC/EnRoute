@@ -9,6 +9,8 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
+
+//A version
 var home = require('./routes/home');
 var meetingsCreated = require('./routes/meetingsCreated');
 var meetingsJoined = require('./routes/meetingsJoined');
@@ -18,6 +20,15 @@ var addMeeting = require('./routes/addMeeting')
 var signup = require('./routes/signup');
 var logout = require('./routes/logout');
 var deleteMeeting = require('./routes/deleteMeeting');
+var createMeeting = require('./routes/createMeeting');
+
+//B version
+var homeB = require('./routes/homeB');
+var friendsB = require('./routes/friendsB');
+var addMeetingB = require('./routes/addMeetingB')
+var meetingsCreatedB = require('./routes/meetingsCreatedB')
+var addFriendB = require('./routes/addFriendB');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -44,6 +55,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+//A version
 app.get('/', index.view);
 app.get('/home', home.view);
 app.get('/meetingsCreated', meetingsCreated.meetingsCreated);
@@ -54,6 +66,15 @@ app.get('/addMeeting', addMeeting.addMeeting);
 app.get('/signedup', signup.addUser);
 app.get('/logout', logout.logout);
 app.get('/deleteMeeting', deleteMeeting.delete);
+app.get('/createMeeting', createMeeting.view);
+
+//B version
+app.get('/viewAlt', index.viewAlt);
+app.get('/homeB', homeB.view);
+app.get('/friendsB', friendsB.view);
+app.get('/addMeetingB', addMeetingB.addMeeting);
+app.get('/meetingsCreatedJoinedB', meetingsCreatedB.meetingsCreated);
+app.get('/addFriendB', addFriendB.addFriend);
 
 // Example route
 // app.get('/users', user.list);

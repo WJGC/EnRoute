@@ -276,7 +276,7 @@ document.getElementById("addMeetingButton").addEventListener("click",function(){
   if (input == '') {
       alert("You need to search a location first!");
   } else {
-    window.location.href = "addMeeting.html";
+    window.location.href = "/createMeeting";
   }
 });
 
@@ -287,11 +287,11 @@ document.getElementById("profileButton").addEventListener("click",function(){
 });
 
 document.getElementById("FriendsButton").addEventListener("click", function(){
-  window.location.href = "friends";
+  window.location.href = "/friendsB";
 });
 
 document.getElementById("MeetingButton").addEventListener("click", function(){
-  window.location.href = "meetingsCreated";
+  window.location.href = "/meetingsCreatedJoinedB";
 });
 
 //Wizard of Oz meeting triggers if session var set

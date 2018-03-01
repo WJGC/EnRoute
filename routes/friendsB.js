@@ -5,7 +5,7 @@
 var friends = require("../friends.json");
 
 exports.view = function(req, res){
-  res.render('friends', friends);
+  res.render('friendsB', friends);
 };
 
 /*exports.addMeeting = function(req, res){

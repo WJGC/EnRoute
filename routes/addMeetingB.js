@@ -1,7 +1,3 @@
-/*
- * GET meeting created.
- */
-
 var meetingsCreated = require("../public/json/meetingsCreated.json");
 
 exports.addMeeting = function(req, res){
@@ -15,5 +11,5 @@ exports.addMeeting = function(req, res){
   }
 
   meetingsCreated.meetingsCreated.push(newMeeting);
-  res.render('home', meetingsCreated);
+  res.render('homeB', meetingsCreated);
 };

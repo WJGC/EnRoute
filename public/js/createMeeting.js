@@ -1,7 +1,12 @@
 /* When the user clicks on cancel 
 navigate back to homepage */
 $("#cancel").click(function(){
-  window.location.href = "/home";
+  var type = sessionStorage.getItem('type');
+  if(type == 'B') {
+  	window.location.href = "/homeB";
+  } else {
+  	window.location.href = "/home";
+  }
 });
 
 

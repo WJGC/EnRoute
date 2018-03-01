@@ -192,7 +192,7 @@ document.getElementById("addMeetingButton").addEventListener("click",function(){
   if (input == '') {
       alert("You need to search a location first!");
   } else {
-    window.location.href = "addMeeting.html";
+    window.location.href = "/createMeeting";
   }
 });
 
