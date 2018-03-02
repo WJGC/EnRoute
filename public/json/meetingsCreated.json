@@ -1,6 +1,6 @@
 {
 	"meetingsCreated": [
-		{
+		/*{
 		  	"meetingLocation" : "Geisel Library",
 		  	"address" : "Geisel Library",
 		  	"meetingName" : "study",
@@ -13,6 +13,6 @@
 		  	"meetingName" : "surf",
 		  	"time" : "2:00",
 		  	"invited" : "john"		
-		}
+		}*/
 	]
 }
