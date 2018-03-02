@@ -319,7 +319,7 @@ if(activeMeeting == 'true') {
         }); 
         var audio = new Audio('../Rings/ten_min.mp3');
         audio.play();
-      }, 10000);
+      }, 5000);
     }
 
     //five minute notification
@@ -330,7 +330,7 @@ if(activeMeeting == 'true') {
         }); 
         var audio = new Audio('../Rings/five_min.mp3');
         audio.play();
-      }, 30000);
+      }, 10000);
     }
 
     //two minute notification
@@ -341,7 +341,7 @@ if(activeMeeting == 'true') {
         }); 
         var audio = new Audio('../Rings/two_min.wav');
         audio.play();
-      }, 50000);
+      }, 15000);
     }
   }
 }

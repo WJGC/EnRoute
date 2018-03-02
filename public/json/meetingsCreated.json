@@ -1,4 +1,18 @@
 {
 	"meetingsCreated": [
+		/*{
+		  	"meetingLocation" : "Geisel Library",
+		  	"address" : "Geisel Library",
+		  	"meetingName" : "study",
+		  	"time" : "1:00",
+		  	"invited" : "john"
+		},
+		{
+		  	"meetingLocation" : "Black's Beach",
+		  	"address" : "Black's Beach",
+		  	"meetingName" : "surf",
+		  	"time" : "2:00",
+		  	"invited" : "john"		
+		}*/
 	]
 }
