@@ -9,6 +9,6 @@ document.getElementById("dropbtn").addEventListener("click",function(){
     }
 });
 
-document.getElementById("navigated").addEventListener("click", function() {
+$(".navigated").click(function(){
 	gtag("send", "event", "navigation", "click");
 });

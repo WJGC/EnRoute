@@ -31,10 +31,10 @@
 		<button class="navigated" id="FriendsButton">My Friends</button>
 		<button id="addMeetingButton">Add Meeting</button>
 
-	    <script> 
-	      document.getElementById("navigated").addEventListener("click", function() {
-	        gtag("send", "event", "navigation", "click");
-	      });
+		<script> 
+			$(".navigated").click(function(){
+				gtag("send", "event", "navigation", "click");
+			});
 	    </script>
 
    		<div class="searchBarHolder">
