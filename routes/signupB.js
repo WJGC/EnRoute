@@ -6,6 +6,7 @@
 var data = require("../public/json/data.json");
 
 exports.addUser = function(req, res){
+	data['viewAlt'] = true;
 	var user = {
 		"name": req.query.name,
 		"username": req.query.username,
