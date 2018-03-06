@@ -10,5 +10,5 @@ document.getElementById("dropbtn").addEventListener("click",function(){
 });
 
 $(".navigated").click(function(){
-	gtag("send", "event", "navigation", "click");
+	ga("send", "event", "navigation", "click");
 });

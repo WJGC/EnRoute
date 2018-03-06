@@ -31,12 +31,6 @@
 		<button class="navigated" id="FriendsButton">My Friends</button>
 		<button id="addMeetingButton">Add Meeting</button>
 
-		<script> 
-			$(".navigated").click(function(){
-				gtag("send", "event", "navigation", "click");
-			});
-	    </script>
-
    		<div class="searchBarHolder">
      		<input id="pac-input" class="controls" type="text" placeholder="Meet at a Location...">
      	</div>
@@ -65,6 +59,11 @@
       		async defer></script>
 
 	    <script src="/js/homepageB.js"></script>
+	    <script> 
+			$(".navigated").click(function(){
+				gtag("send", "event", "navigation", "click");
+			});
+	    </script>
 	    <!--<script src="/js/menu.js"></script>-->
 	</body>
 </html>
