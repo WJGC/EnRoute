@@ -26,10 +26,16 @@
 			Search Your Meeting's Location!
 		</div>-->
 
-		<button id="profileButton">User Profile</button>
-		<button id="MeetingButton">Meetings</button>
-		<button id="FriendsButton">My Friends</button>
+		<button class="navigated" id="profileButton">User Profile</button>
+		<button class="navigated" id="MeetingButton">Meetings</button>
+		<button class="navigated" id="FriendsButton">My Friends</button>
 		<button id="addMeetingButton">Add Meeting</button>
+
+	    <script> 
+	      document.getElementById("navigated").addEventListener("click", function() {
+	        gtag("send", "event", "navigation", "click");
+	      });
+	    </script>
 
    		<div class="searchBarHolder">
      		<input id="pac-input" class="controls" type="text" placeholder="Meet at a Location...">

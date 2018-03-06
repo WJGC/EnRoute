@@ -8,3 +8,7 @@ document.getElementById("dropbtn").addEventListener("click",function(){
       menu.style.display = 'block';
     }
 });
+
+document.getElementById("navigated").addEventListener("click", function() {
+	gtag("send", "event", "navigation", "click");
+});

@@ -22,7 +22,12 @@
 </head>
 <body>
 
-  <a href="/homeB" id= "backbtn" class="btn btn-default">Back</a>
+  <a href="/homeB" id="backbtn" class="btn btn-default">Back</a>
+  <script> 
+    document.getElementById("backbtn").addEventListener("click", function() {
+      gtag("send", "event", "navigation", "click");
+    });
+  </script>
 
   <h3 id="friendsHeader" class="header">Friends</h3>
 

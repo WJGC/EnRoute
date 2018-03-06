@@ -129,7 +129,9 @@ function initMap() {
         });
       }
 
-      
+      if(window.Notification && Notification.permission !== "granted") {
+        Notification.requestPermission();
+      }
       // create location based on meeting set
         /*$.getJSON("../json/meetingsCreated.json", function(meetings) {
         console.log(Object.keys(meetings.meetingsCreated).length);
