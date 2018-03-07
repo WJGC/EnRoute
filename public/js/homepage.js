@@ -11,6 +11,9 @@ function initMap() {
   });
   var infoWindow = new google.maps.InfoWindow;
 
+  //initially disable add meeting button
+  document.getElementById("addMeetingButton").disabled = true;
+  document.getElementById("addMeetingButton").style.visibility = 'hidden';
 
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
@@ -28,9 +31,13 @@ function initMap() {
   searchBox.addListener('places_changed', function() {
     var places = searchBox.getPlaces();
     if (places.length == 0) {
+      document.getElementById("addMeetingButton").disabled = true;
       return;
     }
 
+      //enable add meeting button after search
+      document.getElementById("addMeetingButton").disabled = false;
+      document.getElementById("addMeetingButton").style.visibility = 'visible';
 
     // Clear out the old markers.
     /*markers.forEach(function(marker) {
