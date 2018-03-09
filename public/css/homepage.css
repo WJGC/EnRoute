@@ -12,10 +12,26 @@ html, body {
  padding: 0;
 }
 
+#addMeetingButton {
+  background-color: #FFCF00;
+}
+
 #description {
  font-family: Roboto;
  font-size: 15px;
  font-weight: 340;
+}
+
+#dropbtn {
+  background-color: #FFCF00;
+}
+
+#myDropdown {
+  background-color: #FFCF00;
+}
+
+.navigated {
+  font-size: 15px;
 }
 
 #infowindow-content .title {
@@ -97,8 +113,8 @@ html, body {
   font-size: 25px;
   color:black;
   text-align: center;
-  background-color: #4d90fe;
-  padding-top: 10px;
+  background-color: #262228;
+  padding-top: 20px;
 }
 
 li {

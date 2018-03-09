@@ -38,6 +38,7 @@ body {
 #cancel{
 	margin-top: 4vw;
 	width:20%;
+	background-color: #FFCF00;
 }
 
 h3{
@@ -48,6 +49,7 @@ h3{
 
 #submitBtn{
 	width:100%;
+	background-color: #FFCF00;
 }
 
 body {
