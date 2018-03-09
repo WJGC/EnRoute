@@ -189,3 +189,7 @@ li {
 #meetingDelete {
     text-align: center;
 }
+
+body {
+    background-image: url('/img/marble.jpg');
+}
