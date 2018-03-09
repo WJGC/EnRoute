@@ -55,7 +55,19 @@ body {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 10;
-    background-color: #FFCF00;
+    background-color: #F7EF6A;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    /*border-top: 1px solid black;
+    border-left: 1px solid black;*/
+}
+
+.navigated {
+    border-bottom: 1px solid black;
+}
+
+.navigated:hover, .navigated:focus {
+    background-color: black;
 }
 
 /* Links inside the dropdown */
