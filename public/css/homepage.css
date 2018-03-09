@@ -27,7 +27,9 @@ html, body {
 }
 
 #myDropdown {
-  background-color: #FFCF00;
+  background-color: #F7EF6A;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .navigated {
