@@ -24,13 +24,13 @@ var createMeeting = require('./routes/createMeeting');
 var createUser = require('./routes/createUser');
 
 //B version
-var homeB = require('./routes/homeB');
+/*var homeB = require('./routes/homeB');
 var friendsB = require('./routes/friendsB');
 var addMeetingB = require('./routes/addMeetingB')
 var meetingsCreatedB = require('./routes/meetingsCreatedB')
 var addFriendB = require('./routes/addFriendB');
 var signupB = require('./routes/signupB');
-var logoutB = require('./routes/logoutB');
+var logoutB = require('./routes/logoutB');*/
 
 // Example route
 // var user = require('./routes/user');
@@ -72,7 +72,7 @@ app.get('/deleteMeeting', deleteMeeting.delete);
 app.get('/createMeeting', createMeeting.view);
 app.get('/signup-page', createUser.view);
 
-//B version
+/*//B version
 app.get('/viewAlt', index.viewAlt);
 app.get('/homeB', homeB.view);
 app.get('/friendsB', friendsB.view);
@@ -80,7 +80,7 @@ app.get('/addMeetingB', addMeetingB.addMeeting);
 app.get('/meetingsCreatedJoinedB', meetingsCreatedB.meetingsCreated);
 app.get('/addFriendB', addFriendB.addFriend);
 app.get('/signedupB', signupB.addUser);
-app.get('/logoutB', logoutB.logout);
+app.get('/logoutB', logoutB.logout);*/
 
 // Example route
 // app.get('/users', user.list);
