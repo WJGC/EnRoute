@@ -230,7 +230,7 @@ if(activeMeeting == 'true') {
     //ten minute notification  
     if(ten == 'true') {
       setTimeout(function(){
-        var n = new Notification('RUHereYet', { 
+        var n = new Notification('EnRoute', { 
           body: friendName + ' is 10 minutes away!',
         }); 
         var audio = new Audio('../Rings/ten_min.mp3');
@@ -241,7 +241,7 @@ if(activeMeeting == 'true') {
     //five minute notification
     if(five == 'true') {
       setTimeout(function(){
-        var n = new Notification('RUHereYet', { 
+        var n = new Notification('EnRoute', { 
           body: friendName + ' is 5 minutes away!',
         }); 
         var audio = new Audio('../Rings/five_min.mp3');
@@ -252,7 +252,7 @@ if(activeMeeting == 'true') {
     //two minute notification
     if(two == 'true') {
       setTimeout(function(){
-        var n = new Notification('RUHereYet', { 
+        var n = new Notification('EnRoute', { 
           body: friendName + ' is 2 minutes away!',
         }); 
         var audio = new Audio('../Rings/two_min.wav');
